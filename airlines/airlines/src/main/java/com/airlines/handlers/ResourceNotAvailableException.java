@@ -1,0 +1,12 @@
+package com.airlines.handlers;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.CONFLICT)
+public class ResourceNotAvailableException extends Exception {
+    private static final long serialVersionUID = 1L;
+    public ResourceNotAvailableException(String message) {
+        super(message);
+    }
+}
